@@ -64,8 +64,8 @@ public abstract class AbstractFakeStateMachine<S extends Enum<S>, E extends Enum
 	}
 
 	private Class<?> findAbstractFakeMachineClass() {
+		Class<?> temp = this.getClass();
 		Class<?> superClass = this.getClass().getSuperclass();
-		Class<?> temp = null;
 		while (superClass != AbstractFakeStateMachine.class) {
 			temp = superClass;
 			superClass = superClass.getSuperclass();
